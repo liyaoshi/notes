@@ -47,4 +47,5 @@ export DISPLAY=\`who |grep ${USER} |tail -n 1 | cut -d\\( -f2 |cut -d\\) -f1\`:0
 # Ubuntu 14.04 run ia32 app
 apt-get install  zlib1g:i386  
 apt-get install libstdc++6:i386  
-
+# Markdown syntax site
+https://daringfireball.net/projects/markdown/syntax
