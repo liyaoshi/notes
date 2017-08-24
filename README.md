@@ -44,3 +44,7 @@ export INSTALL_MOD_PATH=~/.
 alias bb="python -m CGIHTTPServer 1234"  
 export DISPLAY=`who |grep ${USER} |tail -n 1 | cut -d\( -f2 |cut -d\) -f1`:0  
 
+# Ubuntu 14.04 run ia32 app
+apt-get install  zlib1g:i386  
+apt-get install libstdc++6:i386  
+
