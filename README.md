@@ -13,3 +13,7 @@ user@PowerEdge-T630-78:~$ cat .gitconfig
 [core]  
         gitproxy = gitproxy  
 
+# gerrit install 
+ sudo adduser gerrit  
+ sudo su gerrit  
+ java -jar gerrit.war init -d /home/gerrit/gerrit  
