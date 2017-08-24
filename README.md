@@ -36,7 +36,7 @@ ProxyPass / http://192.168.18.58:8080/
 ProxyPassReverse / http://192.168.18.58:8080/  
 </VirtualHost>  
 
-# gerrit install
+# bash alias
 export CPUNUMBER=`grep -c processor /proc/cpuinfo`  
 alias m="make -j $CPUNUMBER"  ARCH=arm  
 alias mm="make -j $CPUNUMBER"  
