@@ -36,3 +36,11 @@ ProxyPass / http://192.168.18.58:8080/
 ProxyPassReverse / http://192.168.18.58:8080/  
 </VirtualHost>  
 
+# gerrit install
+export CPUNUMBER=`grep -c processor /proc/cpuinfo`  
+alias m="make -j $CPUNUMBER"  ARCH=arm  
+alias mm="make -j $CPUNUMBER"  
+export INSTALL_MOD_PATH=~/.  
+alias bb="python -m CGIHTTPServer 1234"  
+export DISPLAY=`who |grep ${USER} |tail -n 1 | cut -d\( -f2 |cut -d\) -f1`:0  
+
