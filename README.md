@@ -1,4 +1,4 @@
-# notes
+# ubuntu 16.04 clone vm from exist image
 	virt-clone -o ubuntu16 -n mysql -f /var/lib/libvirt/images/mysql.img 	
 # git proxy over socat
 user@PowerEdge-T630-78:~$ cat bin/gitproxy  
