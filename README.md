@@ -17,3 +17,22 @@ user@PowerEdge-T630-78:~$ cat .gitconfig
  sudo adduser gerrit  
  sudo su gerrit  
  java -jar gerrit.war init -d /home/gerrit/gerrit  
+# Apache proxy pass
+<VirtualHost 136.18.227.58:8888>  
+ProxyRequests Off  
+<Proxy *>  
+        Order deny,allow  
+        Allow from all  
+        AuthType Basic  
+        AuthName "Restricted Content"  
+        AuthUserFile /etc/apache2/.htpasswd  
+        Require valid-user  
+</Proxy>  
+AllowEncodedSlashes on  
+ErrorLog ${APACHE_LOG_DIR}/gerrit/error.log  
+CustomLog ${APACHE_LOG_DIR}/gerrit/access.log combined  
+
+ProxyPass / http://192.168.18.58:8080/  
+ProxyPassReverse / http://192.168.18.58:8080/  
+</VirtualHost>  
+
