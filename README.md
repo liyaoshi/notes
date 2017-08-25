@@ -52,20 +52,20 @@ https://daringfireball.net/projects/markdown/syntax
 # ssh no passwd
 /home/liyaoshi/authorized_keys
 # Bridge with default instead of eth0
-'apt-get install bridge-utils'
-xhuang10@ubuntu:~$ cat /etc/network/interfaces
-source /etc/network/interfaces.d/*
-auto lo
-iface lo inet loopback
-auto br0
-iface br0 inet static
-bridge_stp off
-bridge_fd 0
-bridge_maxwait 0
-address 192.168.122.4
-netmask 255.255.255.0
-gateway 192.168.122.1
-bridge_ports ens3
+'apt-get install bridge-utils'  
+xhuang10@ubuntu:~$ cat /etc/network/interfaces  
+source /etc/network/interfaces.d/*  
+auto lo  
+iface lo inet loopback  
+auto br0  
+iface br0 inet static  
+bridge_stp off  
+bridge_fd 0  
+bridge_maxwait 0  
+address 192.168.122.4  
+netmask 255.255.255.0  
+gateway 192.168.122.1  
+bridge_ports ens3  
 
 
 
