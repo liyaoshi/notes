@@ -37,16 +37,16 @@ ProxyPassReverse / http://192.168.18.58:8080/
 </VirtualHost>  
 
 # bash alias
-export CPUNUMBER=`grep -c processor /proc/cpuinfo`  
-alias m="make -j $CPUNUMBER"  ARCH=arm  
-alias mm="make -j $CPUNUMBER"  
-export INSTALL_MOD_PATH=~/.  
-alias bb="python -m CGIHTTPServer 1234"  
-export DISPLAY=\`who |grep ${USER} |tail -n 1 | cut -d\\( -f2 |cut -d\\) -f1\`:0  
+	export CPUNUMBER=\`grep -c processor /proc/cpuinfo\`  
+	alias m="make -j $CPUNUMBER"  ARCH=arm  
+	alias mm="make -j $CPUNUMBER"  
+	export INSTALL_MOD_PATH=~/.  
+	alias bb="python -m CGIHTTPServer 1234"  
+	export DISPLAY=\`who |grep ${USER} |tail -n 1 | cut -d\\( -f2 |cut -d\\) -f1\`:0  
 
 # Ubuntu 14.04 run ia32 app
-apt-get install  zlib1g:i386  
-apt-get install libstdc++6:i386  
+	apt-get install  zlib1g:i386  
+	apt-get install libstdc++6:i386  
 # Markdown syntax site
 https://daringfireball.net/projects/markdown/syntax
 # ssh no passwd
