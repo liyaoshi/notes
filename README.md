@@ -72,3 +72,6 @@ bridge_ports ens3
 # Get mac Address and ip Address 
 	ifconfig eth0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'
 	ifconfig eth0 | grep -oP '(?<=inet addr:)[0-9.]*'
+# Generate 1M 0xFF file
+	dd if=/dev/zero bs=1024 count=1024 | tr "\000" "\377" > testfile
+
