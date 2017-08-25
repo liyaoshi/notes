@@ -69,4 +69,6 @@ bridge_ports ens3
 
 # Python Upload server
 	https://github.com/stackp/Droopy/blob/master/droopy
-
+# Get mac Address and ip Address 
+	ifconfig eth0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'
+	ifconfig eth0 | grep -oP '(?<=inet addr:)[0-9.]*'
