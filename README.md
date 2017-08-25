@@ -51,7 +51,7 @@ ProxyPassReverse / http://192.168.18.58:8080/
 https://daringfireball.net/projects/markdown/syntax
 # ssh no passwd
 /home/liyaoshi/authorized_keys
-# Bridge with default instead of eth0
+# ubuntu start br0 instead of eth0
 	apt-get install bridge-utils    
 xhuang10@ubuntu:~$ cat /etc/network/interfaces  
 source /etc/network/interfaces.d/*  
