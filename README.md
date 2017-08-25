@@ -67,5 +67,6 @@ netmask 255.255.255.0
 gateway 192.168.122.1  
 bridge_ports ens3  
 
-
+# Python Upload server
+	https://github.com/stackp/Droopy/blob/master/droopy
 
