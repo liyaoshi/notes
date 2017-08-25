@@ -49,3 +49,5 @@ apt-get install  zlib1g:i386
 apt-get install libstdc++6:i386  
 # Markdown syntax site
 https://daringfireball.net/projects/markdown/syntax
+# ssh no passwd
+/home/liyaoshi/authorized_keys
