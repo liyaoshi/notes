@@ -74,4 +74,5 @@ bridge_ports ens3
 	ifconfig eth0 | grep -oP '(?<=inet addr:)[0-9.]*'
 # Generate 1M 0xFF file
 	dd if=/dev/zero bs=1024 count=1024 | tr "\000" "\377" > testfile
-
+# Jacinto create android bootimg
+	out/host/linux-x86/bin/mkbootimg  --kernel out/target/product/jacinto6evm/kernel --ramdisk out/target/product/jacinto6evm/ramdisk.img --base 0x80000000 --ramdisk_offset 0x01f00000 --output out/target/product/jacinto6evm/boot.img
