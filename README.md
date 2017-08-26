@@ -76,3 +76,14 @@ bridge_ports ens3
 	dd if=/dev/zero bs=1024 count=1024 | tr "\000" "\377" > testfile
 # Jacinto create android bootimg
 	out/host/linux-x86/bin/mkbootimg  --kernel out/target/product/jacinto6evm/kernel --ramdisk out/target/product/jacinto6evm/ramdisk.img --base 0x80000000 --ramdisk_offset 0x01f00000 --output out/target/product/jacinto6evm/boot.img
+#imx6 android make boot.img
+	out/host/linux-x86/bin/mkbootimg  --kernel out/target/product/sabreauto_6q/kernel 
+		--ramdisk out/target/product/sabreauto_6q/ramdisk.img 
+		--cmdline "console=ttymxc3,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=320M androidboot.console=ttymxc3 consoleblank=0 androidboot.hardware=freescale cma=384M" 
+		--base 0x14000000 --second out/target/product/sabreauto_6q/$DTS_BOARD  
+		--output out/target/product/sabreauto_6q/boot.img; \
+        out/host/linux-x86/bin/boot_signer 
+		/boot out/target/product/sabreauto_6q/boot.img 
+		build/target/product/security/verity.pk8 
+		build/target/product/security/verity.x509.pem 
+		out/target/product/sabreauto_6q/boot.img; 
