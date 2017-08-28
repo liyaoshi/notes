@@ -94,4 +94,5 @@ bridge_ports ens3
 	http://www.fp7-save.eu/papers/EUC2014B.pdf  
 	https://www.linux-kvm.org/images/b/b3/01x09b-VFIOandYou-small.pdf  
 	http://www.virtualopensystems.com/en/services/vfio-full-gpu-virtualization/  
-
+# KVM on omap5
+	http://www.virtualopensystems.com/en/solutions/guides/kvm-svirt-omap5/  
