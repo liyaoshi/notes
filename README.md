@@ -14,9 +14,11 @@ user@PowerEdge-T630-78:~$ cat .gitconfig
         gitproxy = gitproxy  
 
 # gerrit install 
- sudo adduser gerrit  
- sudo su gerrit  
- java -jar gerrit.war init -d /home/gerrit/gerrit  
+	sudo adduser gerrit  
+	sudo su gerrit  
+	java -jar gerrit.war init -d /home/gerrit/gerrit   
+ or
+	java -jar gerrit.war init --batch -d ~/gerrit_testsite 
 # Apache proxy pass
 <VirtualHost 136.18.227.58:8888>  
 ProxyRequests Off  
