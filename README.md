@@ -100,3 +100,5 @@ bridge_ports ens3
 	http://www.virtualopensystems.com/en/solutions/guides/kvm-svirt-omap5/  
 # Open project manager 
 	https://opensource.com/business/16/3/top-project-management-tools-2016
+# Show build step folder
+	ls -alut | sed '1!G;h;$!d'
