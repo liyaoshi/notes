@@ -102,3 +102,7 @@ bridge_ports ens3
 	https://opensource.com/business/16/3/top-project-management-tools-2016
 # Show build step folder
 	ls -alut | sed '1!G;h;$!d'
+# raspibian ss ctx eroro
+	/usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
+	line52	libcrypto.EVP_CIPHER_CTX_reset.argtypes = (c_void_p,)
+	line111 libcrypto.EVP_CIPHER_CTX_reset(self._ctx)
