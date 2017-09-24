@@ -77,6 +77,8 @@ bridge_ports ens3
 # Generate 1M 0xFF file
 	dd if=/dev/zero bs=1024 count=1024 | tr "\000" "\377" > testfile
 # Jacinto create android bootimg
+	out/host/linux-x86/bin/mkbootfs -d out/target/product/jacinto6evm/system out/target/product/jacinto6evm/root | out/host/linux-x86/bin/minigzip > out/target/product/jacinto6evm/ramdisk.img
+
 	out/host/linux-x86/bin/mkbootimg  --kernel out/target/product/jacinto6evm/kernel --ramdisk out/target/product/jacinto6evm/ramdisk.img --base 0x80000000 --ramdisk_offset 0x01f00000 --output out/target/product/jacinto6evm/boot.img
 	make_ext4fs -s -T -1 -S out/target/product/jacinto6evm/root/file_contexts -L system -l 805306368 -a system out/target/product/jacinto6evm/obj/PACKAGING/systemimage_intermediates/system.img out/target/product/jacinto6evm/system out/target/product/jacinto6evm/system
 	
