@@ -108,3 +108,6 @@ bridge_ports ens3
 	/usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
 	line52	libcrypto.EVP_CIPHER_CTX_reset.argtypes = (c_void_p,)
 	line111 libcrypto.EVP_CIPHER_CTX_reset(self._ctx)
+# ti-gc320-test build
+	 make -f makefile.linux VIVANTE_SDK_INC=/home/xhuang10/git/Ti/ti-gc320-test/sdk/include VIVANTE_SDK_LIB=/home/xhuang10/git/Ti/ti-gc320-libs/targetfs/jacinto6evm/lib LIB_2DUTS_DIR=/home/xhuang10/git/Ti/ti-gc320-test/tests/src/test/hal/common/UnitTest/galUtil/bin_r
+
