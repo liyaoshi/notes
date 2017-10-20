@@ -110,4 +110,8 @@ bridge_ports ens3
 	line111 libcrypto.EVP_CIPHER_CTX_reset(self._ctx)
 # ti-gc320-test build
 	 make -f makefile.linux VIVANTE_SDK_INC=/home/xhuang10/git/Ti/ti-gc320-test/sdk/include VIVANTE_SDK_LIB=/home/xhuang10/git/Ti/ti-gc320-libs/targetfs/jacinto6evm/lib LIB_2DUTS_DIR=/home/xhuang10/git/Ti/ti-gc320-test/tests/src/test/hal/common/UnitTest/galUtil/bin_r
+# repo local 
+	 repo forall -c 'echo $REPO_PATH; ssh -p 29418 admin@136.18.227.196 gerrit create-project $REPO_PATH ;'
+	 repo forall -c 'echo $REPO_PATH; git push ssh://admin@136.18.227.196:29418/$REPO_PATH +refs/heads/* +refs/tags/*;'
+
 
