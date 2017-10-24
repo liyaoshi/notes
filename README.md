@@ -114,10 +114,10 @@ bridge_ports ens3
 	 repo forall -c 'echo $REPO_PATH; ssh -p 29418 admin@136.18.227.196 gerrit create-project $REPO_PATH ;'
 	 repo forall -c 'echo $REPO_PATH; git push ssh://admin@136.18.227.196:29418/$REPO_PATH +refs/heads/* +refs/tags/*;'
 #LVM Add disk
-	sfdisk /dev/sdb + ,,8e + ctrl-d
-	pvcreate /dev/sdb1
-	vgextend SVN-vg /dev/sdb1
-	lvextend -L+100G /dev/SVN-vg/root
-	resize2fs /dev/SVN-vg/root
+	 sfdisk /dev/sdb + ,,8e + ctrl-d
+	 pvcreate /dev/sdb1
+	 vgextend SVN-vg /dev/sdb1
+	 lvextend -L+100G /dev/SVN-vg/root
+	 resize2fs /dev/SVN-vg/root
 
 
