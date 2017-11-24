@@ -121,6 +121,8 @@ bridge_ports ens3
 	 resize2fs /dev/SVN-vg/root
 # Ti-sdk wiki
 	 http://processors.wiki.ti.com/index.php/Processor_SDK_Building_The_SDK
+# Color term font
+     https://misc.flogisoft.com/bash/tip_colors_and_formatting    
 
 
 
