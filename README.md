@@ -123,6 +123,12 @@ bridge_ports ens3
 	 http://processors.wiki.ti.com/index.php/Processor_SDK_Building_The_SDK
 # Color term font
      https://misc.flogisoft.com/bash/tip_colors_and_formatting    
-
+# Server without framebuffer console
+     http://kb.digium.com/articles/FAQ/How-to-disable-the-Linux-frame-buffer-if-it-s-causing-problems
+     vga=normal
+     nofb
+     nomodeset
+     video=vesafb:off
+     i915.modeset=0	
 
 
