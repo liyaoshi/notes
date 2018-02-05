@@ -132,4 +132,5 @@ bridge_ports ens3
      i915.modeset=0	
 # Linux Display common framework
     https://events.static.linuxfound.org/sites/events/files/slides/20131024-elce.pdf
-
+# drm debug command
+    u-boot bootargs + drm.debug=0xff    
