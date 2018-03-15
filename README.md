@@ -132,5 +132,6 @@ bridge_ports ens3
      i915.modeset=0	
 # Linux Display common framework
     https://events.static.linuxfound.org/sites/events/files/slides/20131024-elce.pdf
-# drm debug command
-    u-boot bootargs + drm.debug=0xff    
+# drm debug command + edid.bin
+    u-boot bootargs + drm.debug=0xff    drm_kms_helper.edid_firmware=HDMI-A-1:edid/1920x1080.bin
+
