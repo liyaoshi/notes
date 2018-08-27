@@ -138,3 +138,5 @@ bridge_ports ens3
     find . |grep ko | sed 's/$/\ \\/g' |sed 's/^.//'| sed 's/^/\$\{KERNELDIR\}&/g'
 # gradle socket proxy
     org.gradle.jvmargs=-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=7077
+    systemProp.socks.proxyHost=127.0.0.1
+    systemProp.socks.proxyPort=1080
