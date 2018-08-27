@@ -136,4 +136,5 @@ bridge_ports ens3
     u-boot bootargs + drm.debug=0xff    drm_kms_helper.edid_firmware=HDMI-A-1:edid/1920x1080.bin
 # kernel find modules
     find . |grep ko | sed 's/$/\ \\/g' |sed 's/^.//'| sed 's/^/\$\{KERNELDIR\}&/g'
-
+# gradle socket proxy
+    org.gradle.jvmargs=-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=7077
