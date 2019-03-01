@@ -140,3 +140,6 @@ bridge_ports ens3
     org.gradle.jvmargs=-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=7077
     systemProp.socks.proxyHost=127.0.0.1
     systemProp.socks.proxyPort=1080
+#  linux turn performance mode 
+	 echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+performance
