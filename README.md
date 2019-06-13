@@ -143,3 +143,5 @@ bridge_ports ens3
 #  linux turn performance mode 
 	 echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 performance
+#  sudo Xauth
+	sudo xauth add $(xauth -f ~/.Xauthority list|tail -1)
