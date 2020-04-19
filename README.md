@@ -145,3 +145,5 @@ bridge_ports ens3
 performance
 #  sudo Xauth
 	sudo xauth add $(xauth -f ~/.Xauthority list|tail -1)
+#  repo with qualcom
+	repo init -u git://codeaurora.org/platform/manifest.git -b release -m LA.BR.1.2.9-06510-8x09.0.xml --repo-url=git://codeaurora.org/tools/repo.git --repo-branch=caf-stable
