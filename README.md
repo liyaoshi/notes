@@ -147,3 +147,5 @@ performance
 	sudo xauth add $(xauth -f ~/.Xauthority list|tail -1)
 #  repo with qualcom
 	repo init -u git://codeaurora.org/platform/manifest.git -b release -m LA.BR.1.2.9-06510-8x09.0.xml --repo-url=git://codeaurora.org/tools/repo.git --repo-branch=caf-stable
+#  Ti dra7 j6 Android O
+	https://processors.wiki.ti.com/index.php/6AO.1.0_Release_Notes
