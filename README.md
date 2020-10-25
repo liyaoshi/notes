@@ -164,3 +164,13 @@ performance
         nameservers:
           addresses: [192.168.1.1,223.5.5.5,223.6.6.6,114.114.114.114]
     	version: 2
+#apache2 alias on 1804
+        Alias /downloads "/opt/downloads/"
+        <Directory "/opt/downloads">
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride None
+        Order deny,allow
+        Deny from all
+        Require all granted
+        Allow from all
+	</Directory>
