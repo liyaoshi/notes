@@ -149,3 +149,18 @@ performance
 	repo init -u git://codeaurora.org/platform/manifest.git -b release -m LA.BR.1.2.9-06510-8x09.0.xml --repo-url=git://codeaurora.org/tools/repo.git --repo-branch=caf-stable
 #  Ti dra7 j6 Android O
 	https://processors.wiki.ti.com/index.php/6AO.1.0_Release_Notes
+#  br0 config with netplan
+	liyaoshi@ubuntu-1804:~$ cat /etc/netplan/50-cloud-init.yaml
+	network:
+    	ethernets:
+        enp5s0:
+            dhcp4: false
+    	bridges:
+      	br0:
+        interfaces: [enp5s0]
+        dhcp4: no
+        addresses: [192.168.1.77/24]
+        gateway4: 192.168.1.1
+        nameservers:
+          addresses: [192.168.1.1,223.5.5.5,223.6.6.6,114.114.114.114]
+    	version: 2
