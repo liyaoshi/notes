@@ -174,3 +174,6 @@ performance
         Require all granted
         Allow from all
 	</Directory>
+#   git save username passwd
+	git config --global credential.helper store
+	in .git-credentials https://liyaoshi:123456@google.com
